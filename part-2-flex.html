@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    body {
+      padding: 3rem;
+      background-color: rgb(226, 233, 255);
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    section {
+      padding: 1rem;
+    }
+    .layout {
+      width: 18rem;
+      height: 18rem;
+      border: 5px solid rgb(255, 0, 0);
+    }
+
+    /* layout-1 */
+    #layout-1 {
+      display: flex;
+    }
+
+    #layout-1 .item-1 {
+      height: 100%;
+      width: 50%;
+    }
+    #layout-1 .item-2 {
+      height: 100%;
+      width: 50%;
+      background-color: rgb(29, 102, 86);
+    }
+    #layout-1 .item-1-1 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(4, 135, 14);
+    }
+
+    #layout-1 .item-1-2 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(101, 126, 9);
+    }
+
+    /* layout-2 */
+    #layout-2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #layout-2 .item-1 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(59, 78, 32);
+    }
+    #layout-2 .item-2 {
+      height: 50%;
+      width: 100%;
+      border: 5px solid rgb(146, 0, 0);
+
+      display: flex;
+    }
+    #layout-2 .item-2 .item-2-1 {
+      width: 33.33%;
+      height: 100%;
+      background-color: rgb(0, 73, 141);
+    }
+    #layout-2 .item-2 .item-2-2 {
+      width: 33.33%;
+      height: 100%;
+      background-color: rgb(4, 93, 177);
+    }
+    #layout-2 .item-2 .item-2-3 {
+      width: 33.33%;
+      height: 100%;
+      background-color: rgb(24, 133, 235);
+    }
+
+    /* layout-3 */
+    #layout-3 {
+      display: flex;
+      border: 5px solid red;
+    }
+
+    #layout-3 .item-1 {
+      width: 33.33%;
+      height: 100%;
+      background-color: rgb(92, 153, 5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: 5px solid rgb(180, 0, 0);
+    }
+    #layout-3 .item-2 {
+      width: 66.66%;
+      height: 100%;
+      background-color: rgb(0, 73, 141);
+      border: 5px solid rgb(118, 0, 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    #layout-3 .item-1 .circle {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: black;
+    }
+
+    #layout-3 .item-2 .circle {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background-color: grey;
+    }
+
+    /* layout-4 */
+
+    #layout-4 {
+      display: flex;
+    }
+
+    #layout-4 .item-1 {
+      height: 100%;
+      width: 50%;
+      background-color: rgb(4, 135, 14);
+    }
+
+    #layout-4 .item-2 {
+      height: 100%;
+      width: 50%;
+      background-color: rgb(0, 73, 141);
+      border: 5px solid rgb(145, 0, 0);
+    }
+
+    #layout-4 .item-2-1 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(0, 225, 255);
+      display: flex;
+    }
+    #layout-4 .item-2-2 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(0, 62, 177);
+    }
+    #layout-4 .item-2-1-1 {
+      height: 100%;
+      width: 50%;
+      background-color: rgb(236, 154, 1);
+    }
+    #layout-4 .item-2-1-2 {
+      height: 100%;
+      width: 50%;
+      background-color: rgb(163, 106, 0);
+    }
+    #layout-4 .item-2-2-1 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(236, 1, 197);
+    }
+    #layout-4 .item-2-2-2 {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(124, 0, 103);
+    }
+
+    /* layout-5 */
+    #layout-5 .item-1 {
+      width: 100%;
+      height: 50%;
+      background-color: forestgreen;
+      display: flex;
+      border: 5px solid rgb(145, 0, 0);
+    }
+
+    #layout-5 .item-1-1 {
+      border: 5px solid rgb(90, 0, 0);
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #layout-5 .circle {
+      border-radius: 50%;
+      height: 5rem;
+      width: 5rem;
+      background: grey;
+    }
+    #layout-5 .item-1-1-1 {
+      /* border-radius: 50%; */
+      height: 5rem;
+      width: 5rem;
+      background: grey;
+    }
+  </style>
+  <body>
+    <h1>red borders are flex containers</h1>
+    <section>
+      <h1>Layout 1</h1>
+      <div class="layout" id="layout-1">
+        <div class="item-1">
+          <div class="item-1-1">
+            <div></div>
+          </div>
+          <div class="item-1-2"></div>
+        </div>
+        <div class="item-2"></div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Layout 2</h1>
+      <div class="layout" id="layout-2">
+        <div class="item-1"></div>
+        <div class="item-2">
+          <div class="item-2-1"></div>
+          <div class="item-2-2"></div>
+          <div class="item-2-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Layout 3</h1>
+      <div class="layout" id="layout-3">
+        <div class="item-1">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="item-2">
+          <div class="circle"></div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Sed, suscipit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Layout 4</h1>
+      <div class="layout" id="layout-4">
+        <div class="item-1"></div>
+        <div class="item-2">
+          <div class="item-2-1">
+            <div class="item-2-1-1"></div>
+            <div class="item-2-1-2"></div>
+          </div>
+          <div class="item-2-2">
+            <div class="item-2-2-1"></div>
+            <div class="item-2-2-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Layout 5</h1>
+      <div class="layout" id="layout-5">
+        <div class="item-1">
+          <div class="item-1-1">
+            <div class="circle"></div>
+          </div>
+          <div class="item-1-1">
+            <div class="item-1-1-1"></div>
+          </div>
+        </div>
+        <div class="item-1">
+          <div class="item-1-1">
+            <div class="item-1-1-1"></div>
+          </div>
+          <div class="item-1-1">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
